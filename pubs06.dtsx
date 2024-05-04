@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pubs06"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{2C1F86EC-130B-48CD-9F36-0BFC4ECEEEE5}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{DE9323CD-269E-49C0-B669-62F0DFF354BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -542,7 +542,7 @@
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="200,66" />
+          TopLeft="141,66" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
