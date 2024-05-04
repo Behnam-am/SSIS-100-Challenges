@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pubs04"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{3770B42B-75F8-4271-969A-BA1D2A140DA2}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{50B1ACD0-CF25-4F31-92B1-6A5DCB0250DE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,15 +39,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="emp_id"
-              DTS:DTSID="{B6E97491-ABCB-4BDA-B6AD-08BFC0963861}"
+              DTS:DTSID="{CCCBFE92-8B0F-4C5E-B33B-55841DC782C5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="135"
               DTS:TextQualified="True"
-              DTS:ObjectName="hire_date"
-              DTS:DTSID="{31F1AEA7-AE13-4B82-84C0-86F005615A0B}"
+              DTS:ObjectName="full name"
+              DTS:DTSID="{2BE1591D-AEA0-4D92-90FC-B8D0AA05132E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,8 +55,8 @@
               DTS:MaximumWidth="51"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="full name"
-              DTS:DTSID="{776CE091-1B17-4B2D-AAC7-9AEAFD8A9CA1}"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{0872645C-29F5-4C96-B7B9-23E9C096E7EC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -238,12 +238,12 @@
                       name="emp_id" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[hire_date]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="51"
                       name="hire_date" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[full name]"
-                      dataType="wstr"
-                      length="51"
+                      dataType="dbTimeStamp"
                       name="full name" />
                   </externalMetadataColumns>
                 </input>
@@ -690,21 +690,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="41,32" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="439,37" />
-        <NodeLayout
           Size="172,42"
           Id="Package\Data Flow Task\Flat File Destination"
           TopLeft="606,36" />
         <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="41,32" />
+        <NodeLayout
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="240,34" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="439,37" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="537,57.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,0"
+              Start="0,0"
+              End="61.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="191,54">
@@ -741,28 +763,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="37.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="537,57.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69,0"
-              Start="0,0"
-              End="61.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="61.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
