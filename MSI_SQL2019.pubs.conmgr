@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MSI_SQL2019.pubs"
+  DTS:DTSID="{9C0D0AF0-3999-4302-9E11-5C382198885C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=MSI\SQL2019;Initial Catalog=pubs;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-100 Challenges-{9C0D0AF0-3999-4302-9E11-5C382198885C}MSI\SQL2019.pubs;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
